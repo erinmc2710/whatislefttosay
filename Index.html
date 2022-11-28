@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>MMCC3045</title>
+		<link href="Index.css" rel="stylesheet" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script src="https://mmcc.mq.edu.au/mmcc3045/resources/week5/jquery-ui.js"></script>
+		<script>
+			$(document).ready(function() {
+				$('#stage').hide().fadeIn(1500);
+
+				$('#title').click(function() {
+					$('#meow').get(0).play();
+					$('#titlecat').animate({ 
+						top: "-=150"
+					})
+				})
+				$('#start').click(function() {
+					window.location = 'prologue.html'
+				})
+			});
+				
+		</script>
+	</head>
+	<body>
+		<div id="stage">
+			<audio id="meow">
+				<source src="sounds/meow.wav">
+			</audio>
+			<img src="images/frontgame.png" id="frontgame">
+			<img src="images/rain.gif" id="rain">
+			<img src="images/cat.png" id="titlecat">
+			<img src ="images/title.png" id="title">
+			<button class="button" role="button" id="start"> Start </button>
+		</div>
+		<div id="audiocontrols">
+			<audio controls autoplay id="homepage">
+	 			<source src="sounds/homepage.mp3">
+			</audio>
+		</div>
+	</body>
+</html>

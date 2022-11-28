@@ -1,0 +1,1452 @@
+div#stage {
+	width: 1200px;
+	height: 600px;
+	border: 10px solid #310A0B;
+	margin: auto;
+	position: relative;
+	background-color: white;
+	overflow: hidden;
+}
+
+body {
+	background-image: url('images/website.png');
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	font-family: 'Open Sans', sans-serif;
+	z-index: 0;
+}
+
+img#frontgame {
+	position: absolute;
+}
+
+img#titlecat {
+	position: absolute;
+	width: 150px;
+	height: 150px;
+	z-index: 0;
+	left: 550px;
+	top: 200px;
+}
+
+img#title {
+	position: absolute;
+	padding: 5px;
+	left: 300px;
+	z-index: 1;
+	cursor: pointer;
+	
+}
+
+#start {
+	width: 200px;
+	z-index: 4;
+	left: 5%;
+	top: 45%;
+}
+
+img#rain {
+	width: 1200px;
+	height: 580px;
+	position: absolute;
+
+}
+
+img#debbie {
+	position: absolute;
+	z-index: 5;
+	left: 1%;
+	top: 42%;
+}
+
+#audiocontrols {
+	position: absolute;
+	left: 40%;
+	padding: 5px;
+}
+
+
+/*-----------------------------------------------Driving------------------------------------------------------*/
+
+img#butterfly {
+	position: absolute;
+	top: 80px;
+	height: 150px;
+	width: 150px;
+	cursor: pointer;
+	left: 400px;
+	z-index: 1;
+}
+
+img#driving {
+	z-index: 0;
+	position: absoltue;
+}
+
+#output {
+	bottom: 0;
+	width: 1140px;
+	padding: 40px;
+	font-size: 18px;
+	font-weight: bold;
+	cursor: pointer;
+	user-select: none;
+	border-top: 4px solid #743A36;
+	background-color: rgba(188, 152, 126, 0.7);
+	position: absolute;
+	z-index: 6;
+}
+
+/*---------------------------------------------Tutorial-------------------------------------------------*/
+
+img#tutorialbg {
+	position: absolute;
+	z-index: 0;
+}
+
+img#door {
+	top: 45%;
+	left: 300px;
+	position: absolute;
+	cursor: pointer;
+	z-index: 1;
+}
+
+img#pot {
+	width: 80px;
+	height: 150px;
+	top: 75%;
+	left: 250px;
+	position: absolute;
+	cursor: pointer;
+	z-index: 3;
+}
+
+img#key {
+	width: 40px;
+	height: 60px;
+	left: 510px;
+	top: 360px;;
+	z-index: 2;
+	position: absolute;
+	cursor: pointer;
+}
+img#mailbox {
+	width: 80px;
+	height: 100px;
+	left: 500px;
+	top: 350px;
+	z-index: 3;
+	position: absolute;
+	cursor: pointer;
+}
+
+img#tutorialcat {
+	position: absolute;
+	left: 51%;
+	top: 57%;
+}
+
+/*-------------------------------------------Hallway-----------------------------------------------------*/
+
+img#hallway {
+	position: absolute;
+	z-index: 0;
+}
+img#hallwaytable {
+	top: 63%;
+	left: 26.5%;
+	cursor: pointer;
+	position: absolute;
+	z-index: 1;
+}
+
+img#bag{
+	position: absolute;
+	left: 90%;
+	top: 83%;
+	width: 100px;
+	height: 100px;
+	cursor: pointer;
+	z-index: 8;
+}
+
+img#yellowpot{
+	position: absolute;
+	top: 48%;
+	left: 18%;
+	user-select: none;
+}
+
+img#bluepot{
+	position: absolute;
+	top: 56%;
+	left: 29%;
+	width: 50px;
+	user-select: none;
+}
+
+img#greenpot{
+	position: absolute;
+	top: 56%;
+	left: 54%;
+	user-select: none;
+}
+
+img#redpot{
+	position: absolute;
+	top: 34%;
+	left: 88%;
+	user-select: none;
+}
+
+img#orangepot{
+	position: absolute;
+	top: 34%;
+	left: 92%;
+	user-select: none;
+}
+
+/*-----------------------------------------------------Book---------------------------------------*/
+
+img#bookbg {
+	z-index: 0;
+	position: absolute;
+	width: 1200px;
+	height: 600px;
+}
+
+img#sparkles {
+	z-index: 1;
+	position: absolute;
+	left: 25%;
+	padding: 5px;
+	width:  600px;
+	height: 600px;
+}
+
+img#collectionbook{
+	position: absolute;
+	left: 30%;
+	padding: 10px;
+	z-index: 2;
+}
+
+#backbutton {
+	top: 70%;
+	left: 45%;	
+	z-index: 3;
+}
+
+/*------------------------------------------Inventory and book--------------------------------------------------*/
+
+img#inventorybook {
+	cursor: pointer;
+	position: absolute;
+	left: 80%;
+	top: 83%;
+	width: 100px;
+	height: 100px;
+	z-index: 8;
+}
+
+div#collectionbook {
+	background-image: url(images/book.png);
+	background-size: 749px 509px;
+	position: relative;
+	top: 0;
+	margin: 5px auto;
+	display: none;
+	width: 749px;
+	height: 509px;
+	display: none;
+	z-index: 5;
+}
+
+img#col-controller {
+	position: absolute;
+	left: 57%;
+	top: 21%;
+	height: 50px;
+	width: 50px;
+}
+
+img#col-polaroid {
+	position: absolute;
+	left: 11%;
+	top: 20%;
+	height: 50px;
+	width: 50px;
+}
+img#col-lunchbox {
+	position: absolute;
+	left: 11%;
+	top: 50%;
+	height: 50px;
+	width: 50px;
+}
+img#col-sneakers {
+	position: absolute;
+	left: 56%;
+	top: 49%;
+	height: 60px;
+	width: 60px;
+}
+img#col-recordplayer {
+	position: absolute;
+	left: 36%;
+	top: 19%;
+	height: 60px;
+	width: 60px;
+}
+img#col-nokiaon {
+	position: absolute;
+	left: 24%;
+	top: 19%;
+	height: 60px;
+	width: 40px;
+}
+img#col-jewellerybox {
+	position: absolute;
+	left: 24%;
+	top: 49%;
+	height: 55px;
+	width: 55px;
+}
+img#col-weddingring {
+	position: absolute;
+	left: 36%;
+	top: 49%;
+	height: 60px;
+	width: 60px;
+}
+
+img#col-collegeletter {
+	position: absolute;
+	left: 70%;
+	top: 20%;
+	height: 60px;
+	width: 60px;
+}
+
+img#col-debbieletter {
+	position: absolute;
+	left: 84%;
+	top: 19%;
+	height: 50px;
+	width: 50px;
+}
+
+img#col-lgbtqflag {
+	position: absolute;
+	left: 70%;
+	top: 49%;
+	height: 60px;
+	width: 60px;
+}
+
+img#col-lyladiary {
+	position: absolute;
+	left: 83%;
+	top: 49%;
+	height: 60px;
+	width: 60px;
+}
+
+#collectionbook .items {
+	width: 50px;
+	height: 50px;
+	top: 10%;
+	margin-right: 5px;
+
+}
+#collectionbook .items img {
+	display: none;
+}
+
+div#inventory {
+	position: relative;
+	background-image: url(images/inventoryfinal.png);
+	background-size: 600px 150px;
+	width: 600px;
+	height: 150px;
+	left: 50%;
+	display: none;
+	z-index: 8;
+}
+
+img#inv-cupboardkey {
+	position: absolute;
+	left: 10%;
+	top: 20%;
+	height: 70px;
+	width: 50px;
+}
+img#inv-silverkey {
+	position: absolute;
+	left: 33%;
+	top: 20%;
+	height: 70px;
+	width: 50px;
+}
+img#inv-tape {
+	position: absolute;
+	left: 53%;
+	top: 20%;
+	height: 70px;
+	width: 70px;
+}
+img#inv-batteries {
+	position: absolute;
+	left: 80%;
+	top: 20%;
+	height: 70px;
+	width: 50px;
+}
+
+#inventory .items {
+	top: 10%;
+	cursor: pointer;
+}
+#inventory .items img {
+	display: none;
+}
+
+.clickable {
+	cursor: pointer;
+}
+
+#kitchenbutton {
+	top: 70%;
+  left: 60%;
+}
+
+#loungeroombutton {
+  top: 60%;
+  left: 37.5%;	
+}
+
+/*-------------------------------------------------Button--------------------------------------------*/
+
+.button {
+  position: absolute;
+  align-self: center;
+  background-color: #CAB19B;
+  background-position: 0 90%;
+  background-size: 4px 3px;
+  border-radius: 15px;
+  border-style: solid;
+  border-width: 2px;
+  box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
+  box-sizing: border-box;
+  color: #310A0B;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  line-height: 23px;
+  outline: none;
+  padding: .75rem;
+  text-decoration: none;
+  transition: all 235ms ease-in-out;
+  user-select: none;
+  touch-action: manipulation;
+}
+
+.button:hover {
+  box-shadow: rgba(0, 0, 0, .9) 2px 8px 8px -5px;
+  transform: translate3d(0, 2px, 0);
+}
+
+.button:focus {
+  box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
+}
+
+/*some of extra button css options are inspired from https://getcssscan.com/css-buttons-examples*/
+
+/*-----------------------------------Hallwaytable--------------------------------------------------*/
+
+img#table {
+	width: 1200px;
+	height: 150px;
+	top: 70%;
+	z-index: 0;
+	position: absolute;
+
+}
+
+img#hallwaywindow {
+	position: absolute;
+	z-index: 0;	
+}
+
+#backbuttonfamilytree {
+	z-index: 4;
+	left: 80%;
+	top: 70%;
+}
+
+img#coinjar {
+	z-index: 3;
+	top: 60%;
+	left: 35%;
+	width: 100px;
+	height: 110px;
+	position: absolute;
+	cursor: pointer;
+}
+
+img#cupboardkey {
+	width: 50px;
+	height: 70px;
+	top: 60%;
+	left: 37%;
+	z-index: 2;
+	position: absolute;
+}
+
+/*img#cupboardkey2 {
+	width: 300px;
+	height: 300px;
+	top: 50px;
+	left: 430px;
+	position: absolute;
+}*/
+
+img#pictureframehall {
+	position: absolute;
+	left: 75%;
+	top: 30%;
+	cursor: pointer;
+}
+/*------------------------------------------------------Kitchen-----------------------------------------*/
+
+img#kitchenbg {
+	position: absolute;
+	z-index: 0;
+}
+
+#diningroombutton {
+	top: 70%;
+	left: 45%;
+	z-index: 1;
+}
+
+img#chilipot {
+	position: absolute;
+	left: 83%;
+	top: 37%;
+	cursor: pointer;
+
+}
+
+img#kitchencupboard {
+	position: absolute;
+	top: 2%;
+	left: 30%;
+}
+
+img#lunchbox {
+	position: absolute;
+	top: 40%;
+	left: 13%;
+	z-index: 2;
+}
+/*----------------------------------------------------Polaroid------------------------------------------------*/
+img#polaroidbg{
+	position: absolute;
+	z-index: 0;
+	width: 1200px;
+	height: 600px;
+}
+img#snowflakebg {
+	position: absolute;
+	width: 1200px;
+	height: 600px;
+	z-index: 1;
+}
+
+img#polaroid {
+	position: absolute;
+	left: 35%;
+	top: 25%;
+	cursor: pointer;
+	z-index: 2;
+}
+/*----------------------------------------------------Lounge room------------------------------------------------*/
+
+img#loungeroom {
+	position: absolute;
+}
+
+img#controller {
+	position: absolute;
+	top: 58%;
+	left: 51%;
+	transform: rotate(20deg);
+	cursor: pointer;
+}
+
+img#loungecat {
+	left: 70%;
+	top: 23%;
+	position: absolute;
+}
+
+img#polaroidcamera {
+	position: absolute;
+	left: 85%;
+	top: 25%;
+	width: 80px;
+	height: 110px;
+}
+
+img#sneakers{
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	top: 50%;
+	left: 22%;
+}
+
+/*--------------------------------------------------Dining room-----------------------------------------*/
+
+div#diningbutton {
+	position: absolute;
+	border: 15px, #6b3e2e;
+	margin-left: auto;
+	margin-right: auto;
+	top: 70%;
+	left: 0;
+	right: 0;
+	text-align: center;
+	width:  150px;
+	height:  100px;
+	background-color: #a1785c;
+	cursor: pointer;
+	font-size: 20px;
+}
+
+img#diningtable {
+	position: absolute;
+	z-index: 0;
+}
+
+img#books1 {
+	width: 150px;
+	position: absolute;
+	top: 50%;
+	left: 2%;
+	z-index: 4;
+}
+img#books2 {
+	width: 150px;
+	position: absolute;
+	top: 45%;
+	left: 10%;
+	z-index: 4;
+}
+img#books3 {
+	width: 250px;
+	position: absolute;
+	top: 40%;
+	left: 15%;
+	z-index: 4;
+}
+img#books4 {
+	width: 200px;
+	position: absolute;
+	top: 45%;
+	left: 25%;
+	z-index: 4;
+}
+img#books5 {
+	width: 200px;
+	position: absolute;
+	top: 53%;
+	left: 25%;
+	z-index: 4;
+}
+img#books6 {
+	width: 200px;
+	position: absolute;
+	top: 45%;
+	left: 38%;
+	z-index: 4;
+}
+
+img#books7 {
+	width: 200px;
+	position: absolute;
+	top: 20%;
+	left: 50%;
+	z-index: 4;
+}
+
+img#books8 {
+	width: 300px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: 4;
+}
+
+img#books9 {
+	width: 200px;
+	position: absolute;
+	top: 55%;
+	left: 60%;
+	z-index: 4;
+}
+
+img#books10 {
+	width: 200px;
+	position: absolute;
+	top: 45%;
+	left: 65%;
+	z-index: 4;
+}
+
+img#books11 {
+	width: 200px;
+	position: absolute;
+	top: 30%;
+	left: 70%;
+	z-index: 4;
+}
+
+img#piece1 {
+	position: absolute;
+	top: 55%;
+	left: 30%;
+	width: 100px;
+	height: 80px;
+	cursor: pointer;
+	z-index: 3;
+}
+img#shelf {
+	position: relative;
+	left: 80%;
+	z-index: 1;
+}
+
+/*----------------------------------------------------Decision1------------------------------------*/
+
+img#decision2bg {
+	position: absolute;
+	z-index: 0;
+}
+
+#lylaroombutton {
+	top: 60%;
+	left: 17%;
+}
+
+#debbieroombutton {
+	top: 60%;
+	left: 70%;
+}
+
+img#decision1plant{
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	top: 55%;
+	left: 30%;
+	z-index: 2;
+	cursor: pointer;
+}
+
+img#decision1plant2{
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	top: 55%;
+	left: 40%;
+	z-index: 2;
+	cursor: pointer;
+}
+
+img#silverkey {
+	position: absolute;
+	top: 57%;
+	left: 42%;
+	width: 40px;
+	height: 70px;
+	z-index: 1;
+	cursor: pointer;
+}
+
+img#batteries {
+	position: absolute;
+	top: 58%;
+	left: 30%;
+	width: 55px;
+	height: 70px;
+	z-index: 1;
+	cursor: pointer;
+}
+
+
+/*------------------------------------------------Lyla room-----------------------------------------*/
+
+img#lylabedroombg {
+	position: absolute;
+	width: 1200px;
+	height: 600px;
+	z-index: 0;
+}
+
+img#nokiaoff{
+	position: absolute;
+	top: 60%;
+	left: 85%;
+	width: 48px;
+	height: 75px;
+	z-index: 1;
+	cursor: pointer;
+}
+
+img#paintbrush {
+	position: absolute;
+	top: 57%;
+	left: 78%;
+	width: 80px;
+	height: 70px;
+	z-index: 1;
+	cursor: pointer;
+}
+
+img#flag{
+	position: absolute;
+	top: 5%;
+	left: 25%;
+	width: 90px;
+	height: 80px;
+	z-index: 1;
+	cursor: pointer;
+}
+img#lylacat{
+	position: absolute;
+	top: 50%;
+	left: 43%;
+	z-index: 1;
+	cursor: pointer;
+}
+
+/*------------------------------------------------Nokia-----------------------------------------*/
+
+img#nokiaon{
+	position: absolute;
+	left: 44%;
+	top: 30%;
+	z-index: 3;
+}
+/*------------------------------------------------Debbie room-----------------------------------------*/
+
+img#debbiebedroombg {
+	position: absolute;
+}
+
+#laundryroombutton {
+	top: 70%;
+	left: 45%;
+}
+img#debbiecat{
+	position: absolute;
+	top: 50%;
+	left:75%;
+	z-index: 1;
+	cursor: pointer;
+}
+img#collegeletter {
+	position: absolute;
+	top: 38%;
+	left:17%;
+	z-index: 1;
+	cursor: pointer;
+}
+
+#draw {
+	position: absolute;
+	background-color: pink;
+	width: 130px;
+	height: 50px;
+	left: 58%;
+	top: 55%;
+	opacity: 0;
+	cursor: pointer;
+}
+/*------------------------------------------------weddingring-----------------------------------------*/
+img#weddingring {
+	position: absolute;
+	top: 35%;
+	left: 40%;
+	z-index: 3;
+}
+/*------------------------------------------------Laundry room-----------------------------------------*/
+
+img#laundrybg {
+	position: absolute;
+}
+#container {
+	position: relative;
+	margin: auto;
+	width: 1000px;
+	height: 450px;
+	border: 2px solid black;
+	border-radius: 12px;
+}
+#puzzleItemsContainer {
+	position: absolute;
+	top: 45%;
+	left: 450px;
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	cursor: pointer;
+}
+.puzzleItems {
+	width: 80px;
+	height: 80px;
+	float: left;
+	margin: 0 5px 0 0;
+	padding: 0;
+	cursor: pointer;
+}
+.draggedItem {
+	z-index: 999;
+	background-color: green;
+	cursor: move;
+}
+
+#bar-outer {
+	top: 5%;
+	left: 20%;
+	width: 500px;
+	height: 10px;
+	border: 3px solid brown;
+	position: relative;
+}
+#bar-inner {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 500px;
+	height: 10px;
+	background-color: black;
+}
+
+/*------------------------------------------------Fail-----------------------------------------*/
+
+#tryagainbutton {
+	top: 40%;
+	left: 45%;
+}
+
+/*------------------------------------------------Piece 2-----------------------------------------*/
+img#piece2 {
+	position: absolute;
+	left: 40%;
+	top: 30%;
+	z-index: 2;
+	cursor: pointer;
+}
+
+img#piecebg {
+	z-index: 0;
+	position: absolute;
+	width: 1200px;
+	height: 600px;
+}
+
+img#piecesparkles {
+	z-index: 1;
+	position: absolute;
+	left: 25%;
+	padding: 5px;
+	width:  600px;
+	height: 600px;
+}
+/*------------------------------------------------Decision2-----------------------------------------*/
+
+img#decision3 {
+	position: absolute;
+}
+
+
+#waylenroombutton {
+	left: 50%;
+	top: 45%;
+}
+
+#parentbedroombutton {
+	top: 55%;
+	left: 25%;
+}
+
+img#decision2cat {
+	position: absolute;
+	top: 46%;
+	width: 50px;
+	height: 100px;
+	left: 43%;
+	z-index: 2;
+	cursor: pointer;
+}
+
+img#tape {
+	position: absolute;
+	top: 52%;
+	left: 44%;
+	width: 40px;
+	height: 70px;
+	z-index: 1;
+	cursor: pointer;
+}
+
+/*------------------------------------------------Waylen room-----------------------------------------*/
+img#waylenbedroombg {
+	position: absolute;
+}
+img#recordplayerw {
+	position: absolute;
+	top: 39%;
+	left: 80%;
+	width: 250px;
+	height: 200px;
+}
+
+img#bottleship {
+	position: absolute;
+	width: 70px;
+	height: 50px;
+	left: 14%;
+	top: 24%;
+	cursor: pointer;
+}
+
+img#jewellerybox{
+	position: absolute;
+	width: 70px;
+	height: 50px;
+	left: 24%;
+	top: 24%;
+	cursor: pointer;
+}
+
+#atticbutton {
+	top: 70%;
+	left: 25%;
+	z-index: 4;
+}
+
+img#waylencat {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	cursor: pointer;
+}
+/*------------------------------------------------Record player-----------------------------------------*/
+
+img#recordplayer {
+	position: absolute;
+	left: 25%;
+	top: 5%;
+	z-index: 3;
+}
+
+/*------------------------------------------------Parent room-----------------------------------------*/
+
+img#estherroombg {
+	position: absolute;
+	z-index: 0;
+}
+
+
+img#esthercat {
+	position: absolute;
+	left: 50%;
+	top: 45%;
+	cursor: pointer;
+	z-index: 1;
+}
+
+
+img#lyladiary {
+	position: absolute;
+	left: 15%;
+	top: 28%;
+	cursor: pointer;
+	height: 100px;
+	width: 80px;
+	z-index: 1;
+}
+
+img#debbieletter {
+	position: absolute;
+	left: 45%;
+	top: 65%;
+	width: 80px;
+	height: 50px;
+	cursor: pointer;
+	z-index: 1;
+}
+
+
+/*-------------------------------------------------Attic---------------------------------------------------*/
+img#atticbg {
+	position: absolute;
+}
+
+img#computer {
+	position: absolute;
+	width: 80px;
+	height: 70px;
+	top: 49%;
+	left: 29%;
+	cursor: pointer;
+}
+
+/*------------------------------------------------Computer-----------------------------------------*/
+
+img#computerbg {
+	position: absolute;
+	z-index: 0;
+}
+
+img#wall {
+	position: absolute;
+	left: 9%;
+	top: 24%;
+	z-index: 1;
+	border: solid 4px brown;
+}
+
+img#player {
+	position: absolute;
+	left: 280px;
+	top: 200px;
+	z-index: 3;
+}
+
+img#cake1 {
+	left: 270px;
+	top: 377px;
+	position: absolute;
+	z-index: 2;
+}
+
+img#cake2 {
+	left: 450px;
+	top: 230px;
+	position: absolute;
+	z-index: 2;
+}
+
+
+img#cake3 {
+	left: 450px;
+	top: 490px;
+	position: absolute;
+	z-index: 2;
+}
+
+img#cake4 {
+	left: 720px;
+	top: 230px;
+	position: absolute;
+	z-index: 2;
+}
+
+img#cake5 {
+	left: 720px;
+	top: 490px;
+	position: absolute;
+	z-index: 2;
+}
+
+#cakeCollected {
+	font-size: 40px;
+}
+
+div#exit {
+	width: 50px;
+	height: 80px;
+	background-color: pink;
+	opacity: 0;
+	position: absolute;
+	top: 200px;
+	left: 1000px;
+}
+
+#compbackbutton {
+	left: 90%;
+	top: 80%;
+	z-index: 4;
+}
+/*-------------------------------------------------Piece3--------------------------------------------*/
+img#piece3 {
+	position: absolute;
+	left: 40%;
+	top: 30%;
+	z-index: 2;
+	cursor: pointer;
+}
+
+/*----------------------------------------------------Picture Frame-------------------------------------*/
+img#frame {
+	position: absolute;
+	width: 1200px;
+	height: 600px;
+}
+
+img#framebg {
+	position: absolute;
+	width: 1000px;
+	height: 450px;
+	border-radius: 10px;
+}
+
+#containerp {
+	position: relative;
+	margin: auto;
+	width: 1000px;
+	height: 450px;
+	border: 2px solid brown;
+	border-radius: 12px;
+	top: 10%;
+	border-radius: 10px;
+}
+.puzzleItemsp {
+	width: 150px;
+	height: 109px;
+	float: left;
+	margin: 0 5px 0 0;
+	padding: 0;
+	cursor: pointer;
+}
+#puzzleItemsContainerp {
+	position: absolute;
+	top: 40%;
+	left: 15%;
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	cursor: pointer;
+	border-radius: 10px;
+}
+/*------------------------------------------------final decision-----------------------------------------*/
+img#picframebg {
+	position: absolute;
+	z-index: 0;
+	width: 1200px;
+	height: 600px;
+}
+img#picframe{
+	position: absolute;
+	width: 600px;
+	height: 400px;
+	top: 10%;
+	left: 25%;
+	z-index: 2;
+}
+
+#frankpic {
+	position: absolute;
+	background-color: pink;
+	width: 50px;
+	height: 50px;
+	top: 38%;
+	left: 50%;
+	z-index: 3;
+	opacity: 0;
+	cursor: pointer;
+}
+
+#estherpic {
+	position: absolute;
+	background-color: pink;
+	width: 50px;
+	height: 50px;
+	top: 38%;
+	left: 45%;
+	z-index: 3;
+	opacity: 0;
+	cursor: pointer;
+}
+
+#lylapic {
+	position: absolute;
+	background-color: pink;
+	width: 50px;
+	height: 68px;
+	top: 48%;
+	left: 43%;
+	z-index: 3;
+	opacity: 0;
+	cursor: pointer;
+}
+
+#waylenpic {
+	position: absolute;
+	background-color: pink;
+	width: 50px;
+	height: 68px;
+	top: 48%;
+	left: 47%;
+	z-index: 3;
+	opacity: 0;
+	cursor: pointer;
+}
+
+#debbiepic {
+	position: absolute;
+	background-color: pink;
+	width: 50px;
+	height: 68px;
+	top: 48%;
+	left: 51%;
+	z-index: 3;
+	opacity: 0;
+	cursor: pointer;
+}
+/*------------------------------------------------Bad Ending-----------------------------------------*/
+img#badbg {
+	position: absolute;
+	z-index: 0;
+}
+img#inventorybook2 {
+	cursor: pointer;
+	position: absolute;
+	left: 2%;
+	top: 2%;
+	width: 100px;
+	height: 100px;
+	z-index: 8;
+}
+/*------------------------------------------------Frank Ending-----------------------------------------*/
+
+img#frankbg {
+	position: absolute;
+	z-index: 0;
+}
+
+img#frank {
+	position: absolute;
+	z-index: 5;
+	left: 65%;
+	top: 39%;
+	display: none;
+}
+img#john { 
+	position: absolute;
+	z-index: 5;
+	left: 80%;
+	top: 41%;
+	display: none;
+}
+/*------------------------------------------------Esther Ending-----------------------------------------*/
+
+img#estherbg {
+	position: absolute;
+	z-index: 0;
+}
+
+img#esther {
+	position: absolute;
+	z-index: 5;
+	left: 80%;
+	top: 41%;
+	display: none;
+	width: 250px;
+	height: 270px;
+}
+
+/*------------------------------------------------Waylen Ending-----------------------------------------*/
+
+img#waylenbg {
+	position: absolute;
+	z-index: 0;
+}
+
+img#waylen {
+	position: absolute;
+	z-index: 5;
+	left: 80%;
+	top: 41%;
+	display: none;
+	width: 250px;
+	height: 270px;
+}
+/*------------------------------------------------Lyla Ending-----------------------------------------*/
+
+img#lylabg {
+	position: absolute;
+	z-index: 0;
+}
+img#lyla {
+	position: absolute;
+	z-index: 5;
+	left: 80%;
+	top: 41%;
+	display: none;
+	width: 250px;
+	height: 270px;
+}
+img#cindy {
+	position: absolute;
+	z-index: 5;
+	left: 65%;
+	top: 41%;
+	display: none;
+	width: 200px;
+	height: 270px;
+}
+
+/*------------------------------------------------play again-----------------------------------------*/
+#playagainbutton {
+	top: 80%;
+	left: 45%;
+}
+
+#failpabg {
+	background-image: url(images/bookbg.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 1200px;
+	height: 600px;
+}
+
+h1 {
+	display: block;
+	font-size: 30px;
+	text-align: center;
+	padding: 10px;
+	top: 30%;
+	z-index: 1;
+	font-family: 'Open Sans', sans-serif;
+	margin: auto;
+}
+
+img#pacat {
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	left: 40%;
+	top: 30%;
+	z-index: 2;
+}
+ 
+p {
+	display: inline-block;
+	font-size: 20px;
+	left: 30%;
+	position: absolute;
+	padding: 10px;
+	margin: auto;
+	width: 500px;
+	z-index: 1;
+	font-family: 'Open Sans', sans-serif;
+}
