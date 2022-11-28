@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>MMCC3045</title>
+		<link href="Index.css" rel="stylesheet" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script src="https://mmcc.mq.edu.au/mmcc3045/resources/week5/jquery-ui.js"></script>
+		<script src="inventory.js"></script>
+		<script>
+			$(document).ready(function() { 
+				checkInventory();
+				checkCollection();
+				$('#stage').hide().fadeIn(500);
+				$('#puzzleItemsContainerp').sortable({
+					update: function() {
+						var userPieces = '';
+						$('#puzzleItemsContainerp li').each(function() {
+							userPieces += $(this).attr('data');
+						})
+						checkResult(userPieces);
+					}
+				});
+				$('#puzzleItemsContainer').disableSelection();
+				function checkResult(userPieces) {
+					if(userPieces == '1234') {
+						$('#success').get(0).play();
+						window.location="finaldecision.html"
+
+					}
+				}
+			});
+		</script>
+	</head>
+	<body>
+		<div id="stage">
+			<img src="images/frame.png" id="frame">
+			<div id="containerp">
+				<img src="images/framebg.jpg" id="framebg">
+				<ul id="puzzleItemsContainerp">
+					<li class="puzzleItemsp" data="2" ><img src="images/piece2.png" id="p2p"></li>
+					<li class="puzzleItemsp" data="4" ><img src="images/piece4.png" id="p4p"></li>
+					<li class="puzzleItemsp" data="1" ><img src="images/piece1.png" id="p1p"></li>
+					<li class="puzzleItemsp" data="3" ><img src="images/piece3.png" id="p3p"></li>
+				</ul>
+			</div>
+			<div id="output">Who ripped this up? I can barely remember how it goes back together...</div>
+		</div>
+		<audio id="success">
+	 		<source src="sounds/success.wav">
+		</audio>
+	</body>
+	<div id="audiocontrols">
+		<audio controls autoplay loop="true" id="ambience">
+	 		<source src="sounds/ambience.mp3">
+		</audio>
+	</div>
+</html>

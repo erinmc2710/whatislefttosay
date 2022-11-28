@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>MMCC3045</title>
+		<link href="Index.css" rel="stylesheet" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script src="https://mmcc.mq.edu.au/mmcc3045/resources/week5/jquery-ui.js"></script>
+		<script src="inventory.js"></script>
+		<script>
+			$(document).ready(function() { 
+				checkInventory();
+				checkCollection();
+				$('#stage').hide().fadeIn(500);
+				$('img#bag').click(function() {
+				 	if( $('#inventory').css('display')=='none' ) {
+				 		$('#baga').get(0).play();
+				 		$('#inventory').slideDown(1000)
+				 	} else {
+				 		$('#inventory').slideUp(1000)
+				 	}
+				 })
+				 $('img#inventorybook').click(function() {
+				 	if( $('#collectionbook').css('display')=='none' ) {
+				 		$('#booka').get(0).play();
+				 		$('#collectionbook').slideDown(800)
+				 	} else {
+				 		 $('#collectionbook').slideUp(800)
+				 	}
+				 })
+				$('.clickable').click(function() {
+					$(this).fadeOut('fast');
+					var itemName = $(this).attr('id');
+					localStorage.setItem(itemName, 'true');
+				})
+				$('#polaroidcamera').click(function() {
+					$('#click2').get(0).play();
+					$('#output').text("That's dad's old polaroid camera, he bought one as soon as him and mum met because he said he wanted to 'hold onto memories'... But I guess even sometimes physical memories isn't enough")
+				})
+				$('#loungecat').click(function() {
+					$('#meow').get(0).play();
+				})
+
+
+			});
+
+		</script>
+	</head>
+	<body>
+		<div id="stage">
+			<img src="images/loungeroom.png" id="loungeroom">
+			<img src="images/controller.png" id="controller" class="clickable">
+			<img src="images/loungecat.png" id="loungecat">
+			<img src="images/sneakers.png" id="sneakers" class="clickable">
+			<img src="images/polaroidcamera.png" id="polaroidcamera">
+			<img src="images/debbie.png" id="debbie">
+			<div id="inventory">
+				<div class="items">
+					<img src="images/cupboardkey.png" id="inv-cupboardkey">
+				</div>
+			</div>
+			<div id="collectionbook">
+				<div class="items">
+					<!-- Frank -->
+					<img src="images/polaroid.png" id="col-polaroid">
+					<img src="images/nokiaon.png" id="col-nokia">
+					<img src="images/recordplayer.png" id="col-recordplayer">
+					<!-- Esther -->
+					<img src="images/lunchbox.png" id="col-lunchbox">
+					<img src="images/jewellerybox.png" id="col-jewellerybox">
+					<img src="images/weddingring.png" id="col-weddingring">
+					<!-- Waylen -->
+					<img src="images/controller.png" id="col-controller">
+					<img src="images/collegeletter.png" id="col-collegeletter">
+					<img src="images/debbieletter.png" id="col-debbieletter">
+					<!-- Lyla -->
+					<img src="images/sneakers.png" id="col-sneakers">
+					<img src="images/lgbtqflag.png" id="col-lgbtqflag">
+					<img src="images/lyladiary.png" id="col-lyladiary">
+				</div>
+			</div>
+			<audio id="click2">
+	 			<source src="sounds/click2.wav">
+			</audio>
+			<audio id="booka">
+				<source src="sounds/booka.wav">
+			</audio>
+			<audio id="baga">
+				<source src="sounds/baga.wav">
+			</audio>
+			<div id="output">This house is never quiet, it's so... ominous.</div>
+			<img src="images/bag.png" id="bag">
+			<img src="images/inventorybook.png" id="inventorybook">
+			<button class="button" role="button" id="diningroombutton" onclick="window.location = 'dining room.html'"> Dining room</button>
+			<audio id="meow">
+				<source src="sounds/meow.wav">
+			</audio>
+		</div>
+	</body>
+	<div id="audiocontrols">
+		<audio controls autoplay loop="true" id="ambience">
+	 		<source src="sounds/ambience.mp3">
+		</audio>
+	</div>
+</html>
+

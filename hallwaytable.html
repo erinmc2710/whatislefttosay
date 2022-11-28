@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>MMCC3045</title>
+		<link href="Index.css" rel="stylesheet" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script src="https://mmcc.mq.edu.au/mmcc3045/resources/week5/jquery-ui.js"></script>
+		<script src="inventory.js"></script>
+		<script>
+			$(document).ready(function() { 
+				checkCollection();
+				checkInventory();
+				$('#stage').hide().fadeIn(500);	
+				$('img#coinjar').click(function() {
+					$('#mailbox').get(0).play();
+					$('img#cupboardkey').animate({
+						top: '-=200'
+					}, {
+						complete: function() {
+							$('#output').text("That's weird, I've never seen this key before")
+						}
+					})
+				});
+				$('.clickable').click(function() {
+					$(this).fadeOut('fast');
+					var itemName = $(this).attr('id');
+					localStorage.setItem(itemName, 'true');
+				})
+				$('img#bag').click(function() {
+				 	if( $('#inventory').css('display')=='none' ) {
+				 		$('#baga').get(0).play();
+				 		$('#inventory').slideDown(1000)
+				 	} else {
+				 		$('#inventory').slideUp(1000)
+				 	}
+				 })
+				 $('img#inventorybook').click(function() {
+				 	if( $('#collectionbook').css('display')=='none' ) {
+				 		$('#booka').get(0).play();
+				 		$('#collectionbook').slideDown(800)
+				 	} else {
+				 		 $('#collectionbook').slideUp(800)
+				 	}
+				 })
+
+				 $('#pictureframehall').click(function() {
+				 	$('#click2').get(0).play();
+				 	$('#output').text("Where's the family photo?! I need to find it!")
+				 })
+
+			});
+
+		</script>
+	</head>
+	<body>
+		<div id="stage">
+			<img src="images/hallway table.png" id="hallwaywindow">
+			<img src="images/coinjar.png" id="coinjar">
+			<img src="images/pictureframe.png" id="pictureframehall">
+			<img src="images/cupboardkey.png" id="cupboardkey" class="clickable">
+			<div id="backbuttonfamilytree" class="button" onclick="window.location = 'Hallway.html'"> Back </div>
+			<div id="inventory">
+				<div class="items">
+					<img src="images/cupboardkey.png" id="inv-cupboardkey">
+				</div>
+			</div>
+			<div id="collectionbook">
+				<div class="items">
+					<img src="images/controller.png" id="col-controller">
+				</div>
+			</div>
+			<div id="output"> It's raining so heavily out there...</div>
+			<img src="images/bag.png" id="bag">
+			<img src="images/inventorybook.png" id="inventorybook">
+			<audio autoplay loop id="hallwaytablea">
+	 			<source src="sounds/hallwaytablea.wav">
+			</audio>
+			<audio id="click2">
+	 			<source src="sounds/click2.wav">
+			</audio>
+			<audio id="booka">
+				<source src="sounds/booka.wav">
+			</audio>
+			<audio id="baga">
+				<source src="sounds/baga.wav">
+			</audio>
+			<audio id="mailbox">
+				<source src="sounds/mailbox.wav">
+			</audio>
+		</div>
+	</body>
+</html>

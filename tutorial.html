@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>MMCC3045</title>
+		<link href="Index.css" rel="stylesheet" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script src="https://mmcc.mq.edu.au/mmcc3045/resources/week5/jquery-ui.js"></script>
+		<script>
+			$(document).ready(function() {
+				$('#stage').hide().fadeIn(500);
+				$('div#output').click(function(){
+					$('#outputclick').get(0).play();
+					$('#output').text("The door is locked. Click on different objects to search for the key")
+				})
+				$('#tutorialcat').click(function(){
+					$('#meow').get(0).play();
+					$('#output').text("That's Leo Lyla's cat, I'd have to say he's probably my favourite out of the whole family")
+				})
+				$('img#pot').click(function(){
+					$('#vase').get(0).play();
+					$('#output').text("Hmm that's weird the key isn't here. Where else could it be?")
+				})
+
+				$('img#door').click(function(){
+					$('#output').text("I just said it was locked.")
+				})
+
+
+				$('img#mailbox').click(function() {
+					$('#mailbox').get(0).play();
+					$('img#key').animate({
+						top: '+=100'
+					}, {
+						complete: function() {
+							$('#output').text("There's the key! Trust Waylen to keep the key in an obvious spot")
+						}
+					})
+				});
+
+				$('img#key').draggable({
+					revert:'invalid',
+					revertDuration: 2000,
+					containment: 'parent',
+					zindex: 100
+				 })	;
+				 
+				
+				 $('img#door').droppable({
+				 	drop: function(event,ui) {
+				 		var item = ui.draggable.attr('id');
+				 		$('img').draggable({disabled: true});
+				 		if(item=="key"){
+				 			$('#door').get(0).play();
+				 			$('#'+item).fadeOut(1000, function() {	
+				 				localStorage.setItem('userChoice', item);
+				 				window.location = 'book.html';
+				 			});
+
+				 		}
+						 		
+					}
+				})		
+
+
+			});
+
+		</script>
+	</head>
+	<body>
+		<div id="stage">
+			<audio id="meow">
+				<source src="sounds/meow.wav">
+			</audio>
+			<audio id="outputclick">
+				<source src="sounds/outputclick.mp3">
+			</audio>
+			<audio id="vase">
+				<source src="sounds/vase.wav">
+			</audio>
+			<audio id="door">
+				<source src="sounds/door.wav">
+			</audio>
+			<audio id="mailbox">
+				<source src="sounds/mailbox.wav">
+			</audio>
+			<img src="images/tutorial.png" id="tutorialbg">
+			<img src="images/rain.gif" id="rain">
+			<img src="images/door.png" id="door">
+			<img src="images/tutorialcat.png" id="tutorialcat">
+			<img src="images/flowerpot.png" id="pot">
+			<div id="output"> Well I'm home...Home sweet- Whatever I'm cold and it's raining I need to get inside quick</div>
+			<img src="images/mailbox.png" id="mailbox">
+			<img src="images/key.png" id="key">
+			<img src="images/debbie.png" id="debbie">
+		</div>
+		<audio autoplay id="cardoor">
+	 			<source src="sounds/homepage.mp3">
+		</audio>
+	</body>
+</html>

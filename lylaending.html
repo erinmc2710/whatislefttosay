@@ -1,0 +1,145 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>MMCC3045</title>
+		<link href="Index.css" rel="stylesheet" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script src="https://mmcc.mq.edu.au/mmcc3045/resources/week5/jquery-ui.js"></script>
+		<script src="inventory.js"></script>
+		<script>
+			$(document).ready(function() { 
+				checkCollection();
+				$('#stage').hide().fadeIn(500);
+				$('img#inventorybook2').click(function() {
+				 	if( $('#collectionbook').css('display')=='none' ) {
+				 		$('#booka').get(0).play();
+				 		$('#collectionbook').slideDown(1000)
+				 	} else {
+				 		$('#collectionbook').slideUp(1000)
+				 	}
+				 })
+					$('div#output').click(eventHandler);
+				var counter = 0;
+				function eventHandler () {
+					counter++;
+					console.log(counter);
+					if(counter==1) {
+						$('#outputclick').get(0).play();
+						$('img#lyla').hide().fadeIn(900);
+						$('div#output').text("Lyla: Hey Debbie! Sorry to make you meet in the school's art room late at night but I just needed to grab a couple supplies...");
+					}
+					if(counter==2) {
+						$('#outputclick').get(0).play();
+						$('#output').text("Debbie: Hey hey, slow down what's going on? Why here? and where is everyone and why is the house a mess??")
+						}
+					if(counter==3) {
+						$('#outputclick').get(0).play();
+						$('img#cindy').hide().fadeIn(900);
+						$('div#output').text("Cindy: Hey I found a blank canvas what a freebie, I mean all the rest had holes or paint, It's kind of ridic- Oh hi Debbie what's up?");
+					}
+					if(counter==4) {
+						$('#outputclick').get(0).play();
+						$('div#output').text("Debbie: Heya Cindy! long time no see, sorr you're in this mess- Anyways, Lyla what's wrong with being like dad? I mean he lives with John and-");
+					}
+					if(counter==5) {
+						$('#outputclick').get(0).play();
+						$('#output').text("Lyla: Whats wrong with being like Frank?! I mean I guess you haven't been there so you didn't know but Frank has been cheating on mum for several years and I knew but he would out me to mum if i said anyhting. THAT'S what's wrong with him! He's a monster it tortuted me for years seeing mum upset over her divorce...")
+					}
+					if(counter==6) {
+						$('#outputclick').get(0).play();
+						$('div#output').text("Waylen: Well... Frank basically alluded to cheating on mum during their marriage and that you, Lyla nad I 'Weren't apart of their primary family'... like he doesn't care anymore about us...  ");
+					}
+					if(counter==7) {
+						$('#outputclick').get(0).play();
+						$('div#output').text("Debbie: I'm so sorry Lyla I didn't know, but what happened to everyone else?");
+					}
+					if(counter==8) {
+						$('#outputclick').get(0).play();
+						$('div#output').text("Lyla: Well Frank came over at night to announce his marriage and said that you, me and Waylen weren't his primary family and then John accidnetally revealed their affair, mum completely freaked out and fainted, Frank called the ambulance but by the time they arrived I had left.");
+					}	
+					if(counter==9) {
+						$('#outputclick').get(0).play();
+						$('div#output').text("Debbie: Oh god I'm so sorry Lyla that's awful... Is mum okay? what hospital is she at?")
+					}
+					if(counter==10) {
+						$('#outputclick').get(0).play();
+						$('div#output').text("Lyla: It's okay it just confirmed I don't belong under that roof, yeah she's fine she was sent to the one 30 minutes away, I called and apparently she got checked out and sent home just before you got here...");
+					}	
+					if(counter==11) {
+						$('#outputclick').get(0).play();
+						$('div#output').text("Lyla: I'm going to live with Cindy now, and if her parents reject us then we will find our own way, I'm sorry you came home to this Debbie but things have been differnet since you and Waylen went to college-");
+					}	
+					if(counter==12) {
+						$('#outputclick').get(0).play();
+						$('div#output').text("Debbie: Wait Waylen went to college? but how did he move- when did this happen? what is he studying?");
+					}
+					if(counter==13) {
+						$('#outputclick').get(0).play();
+						$('div#output').text("Lyla: Well he came home in the morning to surprise us, he moved to the interstate one about 3 hours away and his girlfriend helped him move, he's been studying architecture for about 6 months now, which means I was alone with mum for 6 months...");
+					}
+					if(counter==14) {
+						$('#outputclick').get(0).play();
+						$('div#output').text("Debbie: I'm so sorry Lyla, hey before you go can you give me one chance to try and fix this? Come back to the house with Cindy and I can try rectify things, she seems to listen to me- hey I just got a text from Waylen that he's at home right now. Give it a chance will you?");
+					}
+					if(counter==15) {
+						$('#outputclick').get(0).play();
+						$('div#output').text("Lyla:... Cindy do you want to come with me?");
+					}
+					if(counter==16) {
+						$('#outputclick').get(0).play();
+						$('div#output').text("Cindy: Yeah of course! Anything to help change your mums view.");
+					}
+					if(counter==17) {
+						window.location="playagain.html"
+					}
+
+				}
+			});
+		</script>
+	</head>
+	<body>
+		<div id="stage">
+			<img src="images/lylaending.jpg" id="lylabg">
+			<img src="images/debbie.png" id="debbie">
+			<img src="images/lyla.png" id="lyla">
+			<img src="images/cindy.png" id="cindy">
+			<div id="collectionbook">
+				<div class="items">
+					<!-- Frank -->
+					<img src="images/polaroid.png" id="col-polaroid">
+					<img src="images/nokiaon.png" id="col-nokia">
+					<img src="images/recordplayer.png" id="col-recordplayer">
+					<!-- Esther -->
+					<img src="images/lunchbox.png" id="col-lunchbox">
+					<img src="images/jewelrybox.png" id="col-jewellerybox">
+					<img src="images/weddingring.png" id="col-weddingring">
+					<!-- Waylen -->
+					<img src="images/controller.png" id="col-controller">
+					<img src="images/collegeletter.png" id="col-collegeletter">
+					<img src="images/debbieletter.png" id="col-debbieletter">
+					<!-- Lyla -->
+					<img src="images/sneakers.png" id="col-sneakers">
+					<img src="images/lgbtqflag.png" id="col-lgbtqflag">
+					<img src="images/lyladiary.png" id="col-lyladiary">
+				</div>
+			</div>
+			<div id="output"> Lyla? Cindy? Is anyone here? </div>
+			<img src="images/inventorybook.png" id="inventorybook2">
+		</div>
+		<audio id="booka">
+				<source src="sounds/booka.wav">
+			</audio>
+			<audio id="outputclick">
+				<source src="sounds/outputclick.mp3">
+			</audio>
+	</body>
+	<div id="audiocontrols">
+		<audio controls autoplay loop="true" id="endmusic">
+	 		<source src="sounds/endmusic.flac">
+		</audio>
+	</div>
+</html>

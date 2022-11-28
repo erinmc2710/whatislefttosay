@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>MMCC3045</title>
+		<link href="Index.css" rel="stylesheet" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script src="https://mmcc.mq.edu.au/mmcc3045/resources/week5/jquery-ui.js"></script>
+		<script src="inventory.js"></script>
+		<script>
+			$(document).ready(function() { 
+				checkCollection();
+				$('#stage').hide().fadeIn(500);
+				$('img#inventorybook2').click(function() {
+					$('#booka').get(0).play();
+				 	if( $('#collectionbook').css('display')=='none' ) {
+				 		$('#collectionbook').slideDown(1000)
+				 	} else {
+				 		$('#collectionbook').slideUp(1000)
+				 	}
+				 })
+				$('div#output').click(eventHandler);
+				var counter = 0;
+				function eventHandler () {
+					counter++;
+					console.log(counter);
+					if(counter==1) {
+						$('#outputclick').get(0).play();
+						$('div#output').text("Debbie: Mum are you awake? I got a text from your boss you had fainted... How are you feeling?");
+					}
+					if(counter==2) {
+						$('#outputclick').get(0).play();
+						$('img#esther').hide().fadeIn(900);
+							$('#output').text("Esther: Debbie? Hi sweetie, what are you doing here? I'm okay yeah I fainted back at the house, is anyone  still there?")
+						}
+					if(counter==3) {
+						$('#outputclick').get(0).play();
+						$('div#output').text("Debbie: No no one, I spent hours looking for people and the house a mess, what happened?");
+					}
+					if(counter==4) {
+						$('#outputclick').get(0).play();
+						$('div#output').text("Esther: Well... earlier that day I found out your sister was dating a girl called Cindy... I read her diary. I mean how could she do this to me? After your father I-");
+					}
+					if(counter==5) {
+						$('#outputclick').get(0).play();
+						$('#output').text("Debbie: Mum. Stop. Where is Lyla now? and where is Waylen? Why did Frank visit?")
+					}
+					if(counter==6) {
+						$('#outputclick').get(0).play();
+						$('div#output').text("Esther: Lyla ran to Cindy's house after I found out, I just don't want her to turn out like her father... anyways Waylen went to college yesterday inter-state and...");
+					}
+					if(counter==7) {
+						$('#outputclick').get(0).play();
+						$('div#output').text("Esther: your father is marrying John, I found out they were dating when your father and I were married...");
+					}
+					if(counter==8) {
+						$('#outputclick').get(0).play();
+						$('div#output').text("Debbie: Oh god mum I'm so sorry... Lyla would never do that, I think you need to trust her and Waylen wants his own life! You have to consider how trapped he must feel after.. you know... tha acci-");
+					}	
+					if(counter==9) {
+						$('#outputclick').get(0).play();
+						$('div#output').text("Esther: I know I know I just was working day and night shifts and Frank hasn't been paying child support... and... and- I didn't wasnt Waylen to leave me like- well- you did... I miss you Debbie...");
+					}
+					if(counter==10) {
+						$('#outputclick').get(0).play();
+						$('div#output').text("Debbie: Yeah I missed you guys too I mean I was planning on surprising you all but- Wait I just got a text from Waylen and Lyla, they got back to the house and they're asking how you are! ");
+					}	
+					if(counter==11) {
+						$('#outputclick').get(0).play();
+						$('div#output').text("Debbie: Let's check you out mum and get you home. Chinese on the way home?");
+					}	
+					if(counter==12) {
+						$('#outputclick').get(0).play();
+						$('div#output').text("Esther: Sounds lovely... And Debbie I'm sorry...Anyways, I could use a night off from cooking.");
+					}
+					if(counter==13) {
+						window.location="playagain.html"
+					}
+
+				}
+			});
+		</script>
+	</head>
+	<body>
+		<div id="stage">
+			<img src="images/estherending.jpg" id="estherbg">
+			<img src="images/debbie.png" id="debbie">
+			<img src="images/esther.png" id="esther">
+			<div id="collectionbook">
+				<div class="items">
+					<!-- Frank -->
+					<img src="images/polaroid.png" id="col-polaroid">
+					<img src="images/nokiaon.png" id="col-nokia">
+					<img src="images/recordplayer.png" id="col-recordplayer">
+					<!-- Esther -->
+					<img src="images/lunchbox.png" id="col-lunchbox">
+					<img src="images/jewelrybox.png" id="col-jewellerybox">
+					<img src="images/weddingring.png" id="col-weddingring">
+					<!-- Waylen -->
+					<img src="images/controller.png" id="col-controller">
+					<img src="images/collegeletter.png" id="col-collegeletter">
+					<img src="images/debbieletter.png" id="col-debbieletter">
+					<!-- Lyla -->
+					<img src="images/sneakers.png" id="col-sneakers">
+					<img src="images/lgbtqflag.png" id="col-lgbtqflag">
+					<img src="images/lyladiary.png" id="col-lyladiary">
+				</div>
+			</div>
+			<div id="output"> *knock* *knock* </div>
+			<img src="images/inventorybook.png" id="inventorybook2">
+		</div>
+		<audio id="booka">
+				<source src="sounds/booka.wav">
+			</audio>
+			<audio id="outputclick">
+				<source src="sounds/outputclick.mp3">
+			</audio>
+	</body>
+	<div id="audiocontrols">
+		<audio controls autoplay loop="true" id="endmusic">
+	 		<source src="sounds/endmusic.flac">
+		</audio>
+	</div>
+</html>

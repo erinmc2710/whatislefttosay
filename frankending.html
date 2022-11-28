@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>MMCC3045</title>
+		<link href="Index.css" rel="stylesheet" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script src="https://mmcc.mq.edu.au/mmcc3045/resources/week5/jquery-ui.js"></script>
+		<script src="inventory.js"></script>
+		<script>
+			$(document).ready(function() { 
+				checkCollection();
+				$('#stage').hide().fadeIn(500);
+				 $('img#inventorybook2').click(function() {
+				 	if( $('#collectionbook').css('display')=='none' ) {
+				 		$('#booka').get(0).play();
+				 		$('#collectionbook').slideDown(800)
+				 	} else {
+				 		 $('#collectionbook').slideUp(800)
+				 	}
+				 })
+				$('div#output').click(eventHandler);
+				var counter = 0;
+				function eventHandler () {
+					counter++;
+					console.log(counter);
+					if(counter==1) {
+						$('#outputclick').get(0).play();
+						$('img#frank').hide().fadeIn(900);
+							$('#output').text("Frank: Hey Debbie! yes I was why's that?")
+						}
+					if(counter==2) {
+						$('#outputclick').get(0).play();
+						$('div#output').text("Debbie: Well I was there for hours and not only is the house a mess but everyone is missing.");
+					}
+					if(counter==3) {
+						$('#outputclick').get(0).play();
+						$('div#output').text("Frank: Oh yeah your mother fainted because Waylen and Lyla basically ran away.");
+					}
+					if(counter==4) {
+						$('#outputclick').get(0).play();
+						$('div#output').text("Debbie: WHAT?! why are you saying it like that?? WHat hospital? Have you found Waylen and Lyla yet?? What is wrong with you?!");
+					}
+					if(counter==5) {
+						$('#outputclick').get(0).play();
+						$('img#john').hide().fadeIn(900);
+							$('#output').text("John: Hey Honey, everything okay I heard screaming and I just put violet to bed... hey Debbie everything okay?")
+					}
+					if(counter==6) {
+						$('#outputclick').get(0).play();
+						$('div#output').text("Debbie: NO everything is not okay! Frank what's going on??");
+					}
+					if(counter==7) {
+						$('#outputclick').get(0).play();
+						$('div#output').text("Frank: Calm down! Waylen and Lyla are safe! Waylen moved to college and Lyla is living with her girlfriend now, and I don't know what hopspital your mother is in but she'll be fine.");
+					}
+					if(counter==8) {
+						$('#outputclick').get(0).play();
+						$('div#output').text("Debbie: You're acting like you don't care! We are still your kids you know and why were you even over?");
+					}	
+					if(counter==9) {
+						$('#outputclick').get(0).play();
+						$('div#output').text("Frank: Well that's why I'm glad you're here, I wanted to announce that John and I are getting married, and we have violet now our adopted baby! You, Waylen and Lyla are still our kids just... not a part of our main family.");
+					}
+					if(counter==10) {
+						$('#outputclick').get(0).play();
+						$('div#output').text("John: It's been a a long awaited 20 years-");
+					}	
+					if(counter==11) {
+						$('#outputclick').get(0).play();
+						$('div#output').text("Debbie: 20 YEARS?! YOU WERE CHEATING ON MUM? How could you? God, I don't know who you are anymore, you're not my dad and he's not my dad... Grandma was right, you were always the dark omen over our family. Bye Frank and John.");
+					}	
+					if(counter==12) {
+						window.location="playagain.html"
+					}
+
+				}
+			});
+		</script>
+	</head>
+	<body>
+			<div id="stage">
+			<img src="images/frankending.jpg" id="frankbg">
+			<img src="images/debbie.png" id="debbie">
+			<img src="images/frank.png" id="frank">
+			<img src="images/john.png" id="john">
+			<div id="collectionbook">
+				<div class="items">
+					<!-- Frank -->
+					<img src="images/polaroid.png" id="col-polaroid">
+					<img src="images/nokiaon.png" id="col-nokia">
+					<img src="images/recordplayer.png" id="col-recordplayer">
+					<!-- Esther -->
+					<img src="images/lunchbox.png" id="col-lunchbox">
+					<img src="images/jewelrybox.png" id="col-jewellerybox">
+					<img src="images/weddingring.png" id="col-weddingring">
+					<!-- Waylen -->
+					<img src="images/controller.png" id="col-controller">
+					<img src="images/collegeletter.png" id="col-collegeletter">
+					<img src="images/debbieletter.png" id="col-debbieletter">
+					<!-- Lyla -->
+					<img src="images/sneakers.png" id="col-sneakers">
+					<img src="images/lgbtqflag.png" id="col-lgbtqflag">
+					<img src="images/lyladiary.png" id="col-lyladiary">
+				</div>
+			</div>
+			<audio id="booka">
+				<source src="sounds/booka.wav">
+			</audio>
+			<audio id="outputclick">
+				<source src="sounds/outputclick.mp3">
+			</audio>
+			<div id="output"> Dad what happened? were you at mums house earlier? </div>
+			<img src="images/inventorybook.png" id="inventorybook2">
+		</div>
+	</body>
+	<div id="audiocontrols">
+		<audio controls autoplay loop="true" id="endmusic">
+	 		<source src="sounds/endmusic.flac">
+		</audio>
+	</div>
+</html>

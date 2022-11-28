@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>MMCC3045</title>
+		<link href="Index.css" rel="stylesheet" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script src="https://mmcc.mq.edu.au/mmcc3045/resources/week5/jquery-ui.js"></script>
+		<script src="inventory.js"></script>
+		<script>
+			$(document).ready(function() { 
+				checkInventory();
+				checkCollection();
+				$('#stage').hide().fadeIn(500);
+				$( "#books1" ).draggable({ revert: "invalid", containment: "parent" });
+				$( "#books2" ).draggable({ revert: "invalid", containment: "parent" });
+				$( "#books3" ).draggable({ revert: "invalid", containment: "parent" });
+				$( "#books4" ).draggable({ revert: "invalid", containment: "parent" });
+				$( "#books5" ).draggable({ revert: "invalid", containment: "parent" });
+				$( "#books6" ).draggable({ revert: "invalid", containment: "parent" });
+				$( "#books7" ).draggable({ revert: "invalid", containment: "parent" });
+				$( "#books8" ).draggable({ revert: "invalid", containment: "parent" });
+				$( "#books9" ).draggable({ revert: "invalid", containment: "parent" });
+				$( "#books10" ).draggable({ revert: "invalid", containment: "parent" });
+				$( "#books11" ).draggable({ revert: "invalid", containment: "parent" });
+				$( "#shelf" ).droppable({
+						drop: function(event, ui) {
+							$('#diningbook').get(0).play();
+							draggedObj = ui.draggable.attr('id');
+							$("#"+draggedObj).fadeOut('slow');
+							}
+						})
+			});
+
+
+		</script>
+	</head>
+	<body>
+		<div id="stage">
+		<img src="images/diningtable.png" id="diningtable">
+		<img src="images/piece1.png" id="piece1" onclick="window.location ='decision1.html'"> 
+		<img src="images/books1.png" id="books1">
+		<img src="images/books2.png" id="books2">
+		<img src="images/books3.png" id="books3">
+		<img src="images/books4.png" id="books4">
+		<img src="images/books5.png" id="books5">
+		<img src="images/books6.png" id="books6">
+		<img src="images/books7.png" id="books7">
+		<img src="images/books8.png" id="books8">
+		<img src="images/books9.png" id="books9">
+		<img src="images/books10.png" id="books10">
+		<img src="images/books11.png" id="books11">
+		<img src="images/shelf.png" id="shelf">
+		<audio id="diningbook">
+	 		<source src="sounds/diningbook.mp3">
+		</audio>
+		<div id="output"> What the hell?! why is the dining room table full of books? I should put them away!</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>MMCC3045</title>
+		<link href="Index.css" rel="stylesheet" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script src="https://mmcc.mq.edu.au/mmcc3045/resources/week5/jquery-ui.js"></script>
+		<script src="inventory.js"></script>
+		<script>
+			$(document).ready(function() { 
+				checkInventory();
+				checkCollection();
+				$('#stage').hide().fadeIn(500);
+				$('div#output').click(eventHandler);
+				var counter = 0;
+				function eventHandler () {
+					counter++;
+					console.log(counter);
+					if(counter==1) {
+						$('#outputclick').get(0).play();
+						$('div#output').text("It's Lyla!");
+					}
+					if(counter==2) {
+						$('#outputclick').get(0).play();
+						$('div#output').text("Lyla is my younger sister, she loves art and always wanted to be a journalist, but last time I spoke to her she gave up and said she didn't know what she wanted to do... ");
+					}
+					if(counter==3) {
+						$('#outputclick').get(0).play();
+						$('div#output').text("I haven't spoken to her in about a month and haven't seen her for 6...");
+					}
+				}
+						
+			});
+		</script>
+	</head>
+	<body>
+		<div id="stage">
+			<img src="images/bg.jpg" id="piecebg">
+			<img src="images/debbie.png" id="debbie">
+			<div id="output"> Nice! The second piece to the photo! </div>
+			<img src="images/sparkles.gif" id="piecesparkles">
+			<img src="images/piece2.png" id="piece2"onclick="window.location = 'decision2.html'"> 
+			<audio autoplay id="sparkles">
+	 			<source src="sounds/sparkles.wav">
+			</audio>
+			<audio id="outputclick">
+				<source src="sounds/outputclick.mp3">
+			</audio>
+		</div>
+	</body>
+</html>

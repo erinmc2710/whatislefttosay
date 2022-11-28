@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>MMCC3045</title>
+		<link href="Index.css" rel="stylesheet" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script src="https://mmcc.mq.edu.au/mmcc3045/resources/week5/jquery-ui.js"></script>
+		<script src="inventory.js"></script>
+		<script>
+			$(document).ready(function() { 
+				checkInventory();
+				checkCollection();
+				$('#stage').hide().fadeIn(500);
+				 $('img#inventorybook2').click(function() {
+				 	if( $('#collectionbook').css('display')=='none' ) {
+				 		$('#booka').get(0).play();
+				 		$('#collectionbook').slideDown(800)
+				 	} else {
+				 		 $('#collectionbook').slideUp(800)
+				 	}
+				 })
+				$('div#output').click(eventHandler);
+				var counter = 0;
+				function eventHandler () {
+					counter++;
+					console.log(counter);
+					if(counter==1) {
+						$('#outputclick').get(0).play();
+						$('div#output').text("I can't rest until I find my family, I guess I'll head to the police station...");
+					}
+					if(counter==2) {
+						$('#outputclick').get(0).play();
+						$('div#output').text("At least the rain has stopped- crap my phone is broken too, I'll have to walk");
+					}
+					if(counter==3) {
+						$('#outputclick').get(0).play();
+						$('#output').text("My grandmother was right, there is a never ending curse on our family...")
+					}
+					if(counter==4) {
+						window.location="playagain.html"
+					}
+				}
+			});
+		</script>
+	</head>
+	<body>
+		<div id="stage">
+			<img src="images/badending.jpg" id="badbg">
+			<img src="images/debbie.png" id="debbie">
+			<div id="collectionbook">
+				<div class="items">
+					<!-- Frank -->
+					<img src="images/polaroid.png" id="col-polaroid">
+					<img src="images/nokiaon.png" id="col-nokia">
+					<img src="images/recordplayer.png" id="col-recordplayer">
+					<!-- Esther -->
+					<img src="images/lunchbox.png" id="col-lunchbox">
+					<img src="images/jewelrybox.png" id="col-jewellerybox">
+					<img src="images/weddingring.png" id="col-weddingring">
+					<!-- Waylen -->
+					<img src="images/controller.png" id="col-controller">
+					<img src="images/collegeletter.png" id="col-collegeletter">
+					<img src="images/debbieletter.png" id="col-debbieletter">
+					<!-- Lyla -->
+					<img src="images/sneakers.png" id="col-sneakers">
+					<img src="images/lgbtqflag.png" id="col-lgbtqflag">
+					<img src="images/lyladiary.png" id="col-lyladiary">
+				</div>
+			</div>
+			<div id="output"> It's almost morning and I still haven't found anyone </div>
+			<img src="images/inventorybook.png" id="inventorybook2">
+			<audio id="outputclick">
+				<source src="sounds/outputclick.mp3">
+			</audio>
+			<audio id="booka">
+				<source src="sounds/booka.wav">
+			</audio>
+		</div>
+	</body>
+	<audio autoplay loop="true" id="fail">
+	 	<source src="sounds/fail.wav">
+	</audio>
+</html>

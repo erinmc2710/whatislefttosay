@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>MMCC3045</title>
+		<link href="Index.css" rel="stylesheet" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script src="https://mmcc.mq.edu.au/mmcc3045/resources/week5/jquery-ui.js"></script>
+		<script src="inventory.js"></script>
+		<script>
+			$(document).ready(function() { 
+				checkInventory();
+				checkCollection();
+				$('#stage').hide().fadeIn(500);
+				$('div#output').click(function() {
+					$('#outputclick').get(0).play();
+					$('#output').text("Is that a text from... I better get going! Click on the family member that texted you...");
+				})
+			});
+		</script>
+	</head>
+	<body>
+		<div id="stage">
+			<img src="images/picframebg.jpg" id="picframebg">
+			<img src="images/sparkles.gif" id="sparkles">
+			<img src="images/picframe.png" id="picframe">
+			<div id="output">It's amazing what sticky tape can do! </div>
+			<img src="images/debbie.png" id="debbie">
+			<div id="frankpic" onclick="window.location = 'frankending.html'"></div>
+			<div id="estherpic" onclick="window.location = 'estherending.html'"></div>
+			<div id="lylapic" onclick="window.location = 'lylaending.html'"></div>
+			<div id="waylenpic" onclick="window.location = 'waylenending.html'"></div>
+			<div id="debbiepic" onclick="window.location = 'badending.html'"></div>
+			<audio autoplay id="sparkles">
+	 			<source src="sounds/sparkles.wav">
+			</audio>
+			<audio id="outputclick">
+				<source src="sounds/outputclick.mp3">
+			</audio>
+		</div>
+	</body>
+	<div id="audiocontrols">
+		<audio controls autoplay loop="true" id="ambience">
+	 		<source src="sounds/ambience.mp3">
+		</audio>
+	</div>
+</html>

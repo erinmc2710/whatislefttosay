@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>MMCC3045</title>
+		<link href="Index.css" rel="stylesheet" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script src="https://mmcc.mq.edu.au/mmcc3045/resources/week5/jquery-ui.js"></script>
+		<script src="inventory.js"></script>
+		<script>
+			$(document).ready(function() { 
+				checkInventory();
+				checkCollection();
+				$('#stage').hide().fadeIn(500);
+				$('div#output').click(eventHandler);
+				var counter = 0;
+				function eventHandler () {
+					counter++;
+					console.log(counter);
+					if(counter==1) {
+						$('#outputclick').get(0).play();
+						$('div#output').text("This is mum and dad's polaroid picture of when they first met!");
+					}
+					if(counter==2) {
+						$('#outputclick').get(0).play();
+						$('div#output').text("Mum and dad both went to New York and by chance went ice skating on the same day.. I would say they met but it was more like dad face planted in front of mum.");
+					}
+					if(counter==3) {
+						$('#outputclick').get(0).play();
+						$('div#output').text("While mum was teaching dad how to ice skate, a photographer, who saw the whole thing, snapped this!")
+					}
+					if(counter==4) {
+						$('#outputclick').get(0).play();
+						$('div#output').text("I mean they met on christmas eve how romantic is that?... but fairytales are fairytales for a reason...")
+					}
+					if(counter==4) {
+						$('#outputclick').get(0).play();
+						$('div#output').text("Anyways, I should pick this up!")
+					}
+				}
+				$('.clickable').click(function() {
+					$(this).fadeOut('fast');
+					var itemName = $(this).attr('id');
+					localStorage.setItem(itemName, 'true');
+				})
+			});
+
+		</script>
+	</head>
+	<body>
+		<div id="stage">
+			<img src="images/bg.jpg" id="polaroidbg">
+			<img src="images/snowflake.gif" id="snowflakebg">
+			<img src="images/polaroid.png" id="polaroid" onclick="window.location = 'dining room.html'" class="clickable">
+			<img src="images/debbie.png" id="debbie">
+			<div id="output"> No way! </div>
+			<audio autoplay id="sparkles">
+	 			<source src="sounds/sparkles.wav">
+			</audio>
+			<audio id="outputclick">
+				<source src="sounds/outputclick.mp3">
+			</audio>
+		</div>
+	</body>
+</html>

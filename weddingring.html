@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>MMCC3045</title>
+		<link href="Index.css" rel="stylesheet" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script src="https://mmcc.mq.edu.au/mmcc3045/resources/week5/jquery-ui.js"></script>
+		<script src="inventory.js"></script>
+		<script>
+			$(document).ready(function() { 
+				checkInventory();
+				checkCollection();
+				$('#stage').hide().fadeIn(500);
+				$('div#output').click(eventHandler);
+				var counter = 0;
+				function eventHandler () {
+					counter++;
+					console.log(counter);
+					if(counter==1) {
+						$('#outputclick').get(0).play();
+						$('div#output').text("This was mums ring!");
+					}
+					if(counter==2) {
+						$('#outputclick').get(0).play();
+						$('div#output').text("The day the divorce was finalised mum came home and threw this down the drain... Lyla and Waylen watched and were so upset...");
+					}
+					if(counter==3) {
+						$('#outputclick').get(0).play();
+						$('div#output').text("So I opened the bottom of the sink and convinced them that mum did it as an accidnet, they were young so it was easy. I then said mum wanted me to keep it just in case...")
+					}
+					if(counter==4) {
+						$('#outputclick').get(0).play();
+						$('div#output').text("I don't think it was my duty to make my siblings happy but ever since the divorce I made it my duty, and I was goo at it, but I just needed my own life, thats why I chose a college so far away...")
+					}
+				}
+				$('.clickable').click(function() {
+					$(this).fadeOut('fast');
+					var itemName = $(this).attr('id');
+					localStorage.setItem(itemName, 'true');
+				})
+			});
+		</script>
+	</head>
+	<body>
+		<div id="stage">
+			<img src="images/bg.jpg" id="piecebg">
+			<img src="images/sparkles.gif" id="piecesparkles">
+			<img src="images/debbie.png" id="debbie">
+			<div id="output"> Oh yeah it's mums wedding ring!  </div>
+			<img src="images/weddingring.png" id="weddingring" onclick="window.location = 'laundryroom.html'" class="clickable"> 
+			<audio autoplay id="sparkles">
+	 			<source src="sounds/sparkles.wav">
+			</audio>
+			<audio id="outputclick">
+				<source src="sounds/outputclick.mp3">
+			</audio>
+		</div>
+	</body>
+</html>

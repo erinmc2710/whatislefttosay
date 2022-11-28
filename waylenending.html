@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>MMCC3045</title>
+		<link href="Index.css" rel="stylesheet" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script src="https://mmcc.mq.edu.au/mmcc3045/resources/week5/jquery-ui.js"></script>
+		<script src="inventory.js"></script>
+		<script>
+			$(document).ready(function() { 
+				checkCollection();
+				$('#stage').hide().fadeIn(500);
+				$('img#inventorybook2').click(function() {
+				 	if( $('#collectionbook').css('display')=='none' ) {
+				 		$('#booka').get(0).play();
+				 		$('#collectionbook').slideDown(1000)
+				 	} else {
+				 		$('#collectionbook').slideUp(1000)
+				 	}
+				 })
+				$('div#output').click(eventHandler);
+				var counter = 0;
+				function eventHandler () {
+					counter++;
+					console.log(counter);
+					if(counter==1) {
+						$('#outputclick').get(0).play();
+						$('div#output').text("Debbie: Hello? Waylen? Am I in the right room?");
+					}
+					if(counter==2) {
+						$('#outputclick').get(0).play();
+						$('img#waylen').hide().fadeIn(900);
+							$('#output').text("Waylen: Hey Debbie! Sorry got held up in class I'm so glad to see you!")
+						}
+					if(counter==3) {
+						$('#outputclick').get(0).play();
+						$('div#output').text("Debbie: Uh hi! Hey what's going on, I was going to surprise everyone at the house but one: it's a mess and two: everyone is missing?!");
+					}
+					if(counter==4) {
+						$('#outputclick').get(0).play();
+						$('div#output').text("Waylen: Oh... you didn't hear? Frank came over and told us he was amrrying John and they adopted a baby...");
+					}
+					if(counter==5) {
+						$('#outputclick').get(0).play();
+						$('#output').text("Debbie: Oh that's cool fo Dad! but Where is mum and Lyla?? and Why did i have to drive 3 hours to visit you, you didn't tell me you moved out for college! I didn't think you wanted to go?")
+					}
+					if(counter==6) {
+						$('#outputclick').get(0).play();
+						$('div#output').text("Waylen: Well... Frank basically alluded to cheating on mum during their marriage and that you, Lyla nad I 'Weren't apart of their primary family'... like he doesn't care anymore about us...  ");
+					}
+					if(counter==7) {
+						$('#outputclick').get(0).play();
+						$('div#output').text("Waylen: Apparently mum read Lyla's diary and found out about her girlfriend Cindy, she basically went off her head that she didn't want her to turn out like Frank and ruin a family. She fainted when Frank broke the news but I called the hospital and she was checked out last night.");
+					}
+					if(counter==8) {
+						$('#outputclick').get(0).play();
+						$('div#output').text("Debbie: Oh my god. All of that went down the day I was going to surprise everyone? Grandma maybe was right- Anyways you're avoiding my question why are YOU here? I mean I found and read your note about me- and I'm sorry but I'm still confused...");
+					}	
+					if(counter==9) {
+						$('#outputclick').get(0).play();
+						$('div#output').text("Waylen: You read that note? Oh I'm sorry Debbie I thought I got rid of that, I'm sorry you read that but that's not how I feel anymore...")
+					}
+					if(counter==10) {
+						$('#outputclick').get(0).play();
+						$('div#output').text("Waylen: I mean at one point I did, in fact I blamed the whole world for abandoning me and leaving me paralysed after the accident, but after moving to college I feel like my eyes were opened and I can study what I love and do what I want!");
+					}	
+					if(counter==11) {
+						$('#outputclick').get(0).play();
+						$('div#output').text("Debbie: That's great and I love that for you, nothing makes me happier than to see you thriving but what about mum and Lyla? How did they feel about you leaving?");
+					}	
+					if(counter==12) {
+						$('#outputclick').get(0).play();
+						$('div#output').text("Waylen: I mean isn't that a little hypocritical? Didn't I say the same thing to you when you left?");
+					}
+					if(counter==13) {
+						$('#outputclick').get(0).play();
+						$('div#output').text("Debbie: I mean that's true... I just got a text from Mum and Lyla that they're back at the house, did you want to come back for the weekend? I'm sure you could use some quality family time after all that disaster.");
+					}
+					if(counter==14) {
+						$('#outputclick').get(0).play();
+						$('div#output').text("Waylen: You know what? I would love that, will my wheelchair fit in your car?");
+					}
+					if(counter==15) {
+						$('#outputclick').get(0).play();
+						$('div#output').text("Debbie: I'm not sure but I'll mkae it fit!");
+					}
+					if(counter==16) {
+						window.location="playagain.html"
+					}
+
+				}
+			});
+</script>
+</head>
+	<body>
+		<div id="stage">
+			<img src="images/waylenending.jpg" id="waylenbg">
+			<img src="images/debbie.png" id="debbie">
+			<img src="images/waylen.png" id="waylen">
+			<div id="collectionbook">
+				<div class="items">
+					<!-- Frank -->
+					<img src="images/polaroid.png" id="col-polaroid">
+					<img src="images/nokiaon.png" id="col-nokia">
+					<img src="images/recordplayer.png" id="col-recordplayer">
+					<!-- Esther -->
+					<img src="images/lunchbox.png" id="col-lunchbox">
+					<img src="images/jewelrybox.png" id="col-jewellerybox">
+					<img src="images/weddingring.png" id="col-weddingring">
+					<!-- Waylen -->
+					<img src="images/controller.png" id="col-controller">
+					<img src="images/collegeletter.png" id="col-collegeletter">
+					<img src="images/debbieletter.png" id="col-debbieletter">
+					<!-- Lyla -->
+					<img src="images/sneakers.png" id="col-sneakers">
+					<img src="images/lgbtqflag.png" id="col-lgbtqflag">
+					<img src="images/lyladiary.png" id="col-lyladiary">
+				</div>
+			</div>
+			<div id="output"> *knock* *knock* </div>
+			<img src="images/inventorybook.png" id="inventorybook2">
+		</div>
+		<audio id="booka">
+				<source src="sounds/booka.wav">
+			</audio>
+			<audio id="outputclick">
+				<source src="sounds/outputclick.mp3">
+			</audio>
+	</body>
+	<div id="audiocontrols">
+		<audio controls autoplay loop="true" id="endmusic">
+	 		<source src="sounds/endmusic.flac">
+		</audio>
+	</div>
+</html>

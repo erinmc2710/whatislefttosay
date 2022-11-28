@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>MMCC3045</title>
+		<link href="Index.css" rel="stylesheet" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script src="https://mmcc.mq.edu.au/mmcc3045/resources/week5/jquery-ui.js"></script>
+		<script>
+			$(document).ready(function() { 
+				$('#stage').hide().fadeIn(500);
+				$('div#output').click(eventHandler);
+				var counter = 0;
+				function eventHandler () {
+					counter++;
+					console.log(counter);
+					if(counter==1) {
+						$('#outputclick').get(0).play();
+						$('div#output').text("Grandma used to stay that something dark was coming after our family...");
+					}
+					if(counter==2) {
+						$('#outputclick').get(0).play();
+						$('div#output').text("I never believed it as a child. Mum would wave her hand and say Nan's just a little paranoid from her dementia");
+					}
+					if(counter==3) {
+						$('#carapproach').get(0).play();
+						$('img#butterfly').animate({
+							top: '+=300',
+							left: '+=600'
+						}, {
+							duration: 2000,
+							complete: function() {
+								$('#output').text("but I think mum was wrong...")
+							}
+						})
+					}
+					if(counter==4) {
+						$('#outputclick').get(0).play();
+						$('div#output').text("Click to continue")
+					}
+					if(counter==5) {
+						$('#click2').get(0).play();
+						window.location = 'tutorial.html'
+					}
+				}
+			});
+		</script>
+	</head>
+	<body>
+		<div id="stage">
+			<audio id="outputclick">
+				<source src="sounds/outputclick.mp3">
+			</audio>
+			<audio id="click2">
+				<source src="sounds/click2.wav">
+			</audio>
+			<audio id="carapproach">
+				<source src="sounds/carapproach.mp3">
+			</audio>
+			<img src="images/driving.jpg" id="driving">
+			<img src="images/debbie.png" id="debbie">
+			<div id="output"> I'm nervous to see everyone, especially grandma </div>
+				<img src="images/butterfly.gif" id="butterfly" >
+		</div>
+		<div id="audiocontrols">
+			<audio controls autoplay id="drivinga">
+	 			<source src="sounds/drivinga.wav">
+			</audio>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>MMCC3045</title>
+		<link href="Index.css" rel="stylesheet" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script src="https://mmcc.mq.edu.au/mmcc3045/resources/week5/jquery-ui.js"></script>
+		<script src="inventory.js"></script>
+		<script>
+			$(document).ready(function() { 
+				checkCollection();
+				checkInventory();
+				$('#stage').hide().fadeIn(500);
+				$('img#bag').click(function() {
+				 	if( $('#inventory').css('display')=='none' ) {
+				 		$('#baga').get(0).play();
+				 		$('#inventory').slideDown(1000)
+				 	} else {
+				 		$('#inventory').slideUp(1000)
+				 	}
+				 })
+				 $('img#inventorybook').click(function() {
+				 	if( $('#collectionbook').css('display')=='none' ) {
+				 		$('#booka').get(0).play();
+				 		$('#collectionbook').slideDown(800)
+				 	} else {
+				 		 $('#collectionbook').slideUp(800)
+				 	}
+				 })
+				 $('div#output').click(function(){
+					$('#outputclick').get(0).play();
+					$('#output').text("That's weird it's a normal wednesday night and no one is home? I thought at least one person would be")
+				})
+				
+			});	
+		</script>
+	</head>
+	<body>
+		<div id="stage">
+			<img src="images/hallway.png" id="hallway">
+			<img src="images/hallwaytable.png" id="hallwaytable" onclick="window.location = 'hallwaytable.html'" >
+			<img src="images/yellowplant.png" id="yellowpot">
+			<img src="images/bluepot.png" id="bluepot">
+			<img src="images/greenplant.png" id="greenpot">
+			<img src="images/redplant.png" id="redpot">
+			<img src="images/orangeplant.png" id="orangepot">
+			<button class="button" role="button" id="kitchenbutton" onclick="window.location = 'kitchen.html'"> Kitchen</button>
+			<button class="button" role="button" id="loungeroombutton" onclick="window.location = 'lounge.html'"> Lounge room </button>
+			<img src="images/debbie.png" id="debbie">
+			<div id="inventory">
+				<div class="items">
+					<img src="images/cupboardkey.png" id="inv-cupboardkey">
+				</div>
+			</div>
+
+			<div id="collectionbook">
+				<div class="items">
+					<img src="images/controller.png" id="col-controller">
+				</div>
+			</div>
+			<div id="output"> Helloooo? Anyone home?! That's weird... where is everyone? </div>
+			<img src="images/bag.png" id="bag">
+			<img src="images/inventorybook.png" id="inventorybook">
+			<audio id="booka">
+				<source src="sounds/booka.wav">
+			</audio>
+			<audio id="baga">
+				<source src="sounds/baga.wav">
+			</audio>
+		</div>
+	</body>
+		<div id="audiocontrols">
+			<audio controls autoplay loop="true" id="ambience">
+	 			<source src="sounds/ambience.mp3">
+			</audio>
+		</div>
+</html>
